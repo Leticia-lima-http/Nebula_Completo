@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nébula — livraria de ficção científica e fantasia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="brand">Nébula<em>.</em></div>
+    <nav class="nav-links">
+      <a href="#estante">Estante</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#assinar">Órbita</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Livros que reorganizam a gravidade da sua estante.</h1>
+      <p class="lede">Uma livraria de bairro dedicada a ficção científica, fantasia e tudo que existe entre as duas coisas. Curadoria pequena, conversas longas, café sempre pronto.</p>
+      <div class="hero-actions">
+        <a href="#estante" class="btn btn-primary">Ver a estante</a>
+        <a href="#sobre" class="btn btn-ghost">Conhecer a loja</a>
+      </div>
+    </div>
+    <div class="orbit-field" aria-hidden="true">
+      <svg viewBox="0 0 400 380">
+        <ellipse class="orbit-line" cx="200" cy="190" rx="160" ry="70" transform="rotate(-12 200 190)"/>
+        <ellipse class="orbit-line" cx="200" cy="190" rx="110" ry="140" transform="rotate(8 200 190)"/>
+        <circle class="orbit-node" cx="200" cy="190" r="10"/>
+        <circle class="orbit-node" cx="340" cy="150" r="4"/>
+        <circle class="orbit-node" cx="70" cy="235" r="5"/>
+        <g id="starfield"></g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section id="estante">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <h2>A estante desta semana</h2>
+        <p>Uma seleção pequena e trocada com frequência — não um catálogo inteiro.</p>
+      </div>
+      <div class="filters" id="filters">
+        <button class="chip" aria-pressed="true" data-genre="todos">Todos</button>
+        <button class="chip" aria-pressed="false" data-genre="ficcao">Ficção científica</button>
+        <button class="chip" aria-pressed="false" data-genre="fantasia">Fantasia</button>
+        <button class="chip" aria-pressed="false" data-genre="distopia">Distopia</button>
+      </div>
+    </div>
+
+    <div class="shelf-wrap">
+      <div class="shelf-controls">
+        <button id="shelf-prev" aria-label="Rolar para a esquerda">&#8592;</button>
+        <button id="shelf-next" aria-label="Rolar para a direita">&#8594;</button>
+      </div>
+      <div class="shelf" id="shelf"></div>
+    </div>
+  </div>
+</section>
+
+<section id="sobre" class="about">
+  <div class="wrap">
+    <blockquote>“Toda boa livraria devia parecer um lugar onde ainda não se sabe tudo o que vai acontecer.”</blockquote>
+    <div>
+      <p>A Nébula nasceu de uma estante de apartamento que ficou grande demais. Hoje ocupa uma esquina só, com iluminação baixa, poltronas gastas e uma seleção pensada por quem lê o gênero há mais de vinte anos.</p>
+      <p>Não vendemos tudo. Vendemos o que vale a pena interromper o que você está fazendo para começar.</p>
+      <div class="about-facts">
+        <div><strong>7</strong><span>anos de loja</span></div>
+        <div><strong>1.200+</strong><span>títulos em giro constante</span></div>
+        <div><strong>3</strong><span>clubes de leitura por mês</span></div>
+        <div><strong>1</strong><span>gato residente, o Kepler</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="assinar">
+  <div class="wrap">
+    <div class="signup">
+      <div class="signup-inner">
+        <div>
+          <h2>Entre na órbita da Nébula</h2>
+          <p>Um e-mail quinzenal com as chegadas da semana, um conto curto e o que anda sendo lido no balcão.</p>
+        </div>
+        <div>
+          <form class="signup-form" id="signup-form" novalidate>
+            <div class="field-row">
+              <input type="email" id="signup-email" placeholder="seu@email.com" required>
+              <button type="submit" class="btn btn-primary">Assinar</button>
+            </div>
+            <div class="form-msg" id="signup-msg" role="status"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap" style="display:flex; justify-content:space-between; width:100%; flex-wrap:wrap; gap:12px;">
+    <span>Nébula — livraria independente</span>
+    <span>Rua das Órbitas, 42 · terça a domingo, 11h–20h</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
